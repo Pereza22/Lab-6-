@@ -11,8 +11,11 @@ def encode_password(password):
     return encoded_password
 # Function to decode an encoded password by shifting each digit down by 3 numbers
 def decode_password(encoded_password):
-    # Partner does this
-    pass
+    dec_password = ''
+    for char in encoded_password:
+	decoded_char = str(int(char) - 3)
+	dec_password += decoded_char
+    return dec_password
 
 # Menu and user input that calls functions
 while True:
